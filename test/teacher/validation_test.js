@@ -1,4 +1,4 @@
-const Teacher = require('../model/teacher');
+const Teacher = require('../../model/teacher');
 const assert = require('assert');
 
 describe('Validates models', () => {
@@ -52,7 +52,7 @@ describe('Validates models', () => {
       })
   });
 
-  it('Should validate NeighborhoodSchema as valid name', (done) => {
+  it('Should validate Teacher NeighborhoodSchema as valid name', (done) => {
     const teacher = new Teacher({ 
       name: 'Jane',
       email: 'm@m.mail.com',
@@ -68,7 +68,7 @@ describe('Validates models', () => {
       });
   });
   
-  it('Should validate AvailabilitySchema as valid name', (done) => {
+  it('Should validate Teacher AvailabilitySchema as valid day', (done) => {
     const teacher = new Teacher({ 
       name: 'Jane',
       email: 'm@m.mail.com',

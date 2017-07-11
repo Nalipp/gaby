@@ -1,10 +1,10 @@
 const assert = require('assert');
-const Teacher = require('../model/teacher');
-const Student = require('../model/student');
+const Teacher = require('../../model/teacher');
+const Student = require('../../model/student');
 
 describe('Creates records', () => {
 
-  it('saves a teacher', (done) => {
+  it('Should save a Teacher record', (done) => {
     const jane = new Teacher({
       name: 'jane',
       email: 'jane@mail.com',
