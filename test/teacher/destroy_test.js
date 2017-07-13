@@ -1,9 +1,9 @@
 const assert = require('assert');
 const Teacher = require('../../model/teacher');
 
-describe('Destroys records', () => {
+describe('Teacher Destroy', () => {
 
-  it('Should delete a Teacher with the name jane', (done) => {
+  it('Should delete a Teacher', (done) => {
     const jane = new Teacher({
       name: 'jane',
       email: 'jane@mail.com',

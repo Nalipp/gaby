@@ -1,8 +1,8 @@
-const NeighborhoodSchema = require('./neighborhoodSchema');
-const AvailabilitySchema = require('./availabilitySchema');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const validator = require('validator');
+const NeighborhoodSchema = require('./neighborhoodSchema');
+const AvailabilitySchema = require('./availabilitySchema');
 
 const teacherSchema = new Schema({
   name: {

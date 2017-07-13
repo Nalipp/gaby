@@ -1,7 +1,7 @@
 const assert = require('assert');
 const Teacher = require('../../model/teacher');
 
-describe('Updates records', () => {
+describe('Teacher Update', () => {
   let jane;
 
   beforeEach((done) => {
