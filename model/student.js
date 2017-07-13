@@ -7,7 +7,10 @@ const AvailabilitySchema = require('./availabilitySchema');
 const studentSchema = new Schema({
   name: {
     type: String,
-    required: [true, 'Name is required']
+    validate: {
+      validator: (name) => name.length > 2 && name.length < 30,
+      message: 'Name must be a valid length'
+    }
   },
   email: {
     type: String,
@@ -20,7 +23,7 @@ const studentSchema = new Schema({
       message: 'Email must be valid'
     }
   },
-  neightborhood: [NeighborhoodSchema],
+  neighborhood: [NeighborhoodSchema],
   availability: [AvailabilitySchema]
 });
 

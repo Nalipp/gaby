@@ -15,6 +15,11 @@ describe('Teacher Update', () => {
       .then(() => done());
   });
 
+  afterEach((done) => {
+    Teacher.collection.drop();
+    done();
+  });
+
   it('Should update Teacher name', (done) => {
     jane.set('name', 'Janie')
     jane.save()
