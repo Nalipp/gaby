@@ -1,0 +1,10 @@
+h1 
+  a(href="/students") Students
+
+form(method='POST', action='/students/' + student._id)
+  label(for='name') Name
+  input#name(type='text', name='name' value=student.name)
+  label(for='email') Email
+  input#email(type='email', name='email' value=student.email)
+  input(type='submit')
+
