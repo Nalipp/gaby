@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const lectureSchema = new Schema({
+const sessionSchema = new mongoose.Schema({
   completed: { type: Boolean, default: false },
   teacherNoShow: { type: Boolean, default: false },
   studentNoShow: { type: Boolean, default: false },
@@ -10,6 +9,6 @@ const lectureSchema = new Schema({
   endTime: Date
 });
 
-const Lecture = mongoose.model('lecture', lectureSchema);
+const Session = mongoose.model('session', sessionSchema);
 
-module.exports = Lecture;
+module.exports = Session;

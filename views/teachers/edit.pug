@@ -1,0 +1,8 @@
+h2 teacher/edit
+form(method='POST', action='/teachers/' + teacher._id)
+  label(for='name') Name
+  input#name(type='text', name='name' value=teacher.name)
+  label(for='email') Email
+  input#email(type='email', name='email' value=teacher.email)
+  input(type='submit')
+

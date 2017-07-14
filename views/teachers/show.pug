@@ -1,0 +1,6 @@
+h2 teacher/show
+#{teacher}
+
+a(href="/teachers/edit/" + teacher._id) edit
+form(method="Post" action="/teachers/delete/" + teacher._id) 
+  button(type="submit") delete
