@@ -1,5 +1,7 @@
-h2 teacher/show
-#{teacher}
+h1 
+  a(href="/teachers") Teachers
+
+p #{teacher}
 
 a(href="/teachers/edit/" + teacher._id) edit
 form(method="Post" action="/teachers/delete/" + teacher._id) 

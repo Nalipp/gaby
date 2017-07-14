@@ -24,7 +24,7 @@ module.exports = {
   },
 
   updateTeacher(id, teacher, cb) {
-    Teacher.findOneAndUpdate(id, teacher, (err, teacher2) => {
+    Teacher.findByIdAndUpdate(id, teacher, (err, teacher2) => {
       const result = {err: err, data: teacher2}
       cb(result);
     });

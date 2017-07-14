@@ -1,4 +1,6 @@
-h2 teacher/edit
+h1 
+  a(href="/teachers") Teachers
+
 form(method='POST', action='/teachers/' + teacher._id)
   label(for='name') Name
   input#name(type='text', name='name' value=teacher.name)

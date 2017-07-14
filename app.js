@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var teachers = require('./routes/teachers/teachers');
-var students = require('./routes/students/students');
+var teachers = require('./routes/teachers');
+var students = require('./routes/students');
 
 var app = express();
 

@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var teacherRepo = require('../../src/teacherRepo');
+var teacherRepo = require('../src/teacherRepo');
 
-router.get('/index', (req, res) => {
+router.get('/', (req, res) => {
   teacherRepo.getTeachers(result => {
     if (result.err) return console.log(err); 
     res.render('teachers/index', { teachers: result.data });
