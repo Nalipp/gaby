@@ -1,5 +1,40 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  html.jumbo
+    h1 Gaby
+    p Connect you child with a top 10% English teacher
+
+    form.search(method="/" action="Post")
+      label(for="neighborhood") location :
+      select(name="neighborhood" id="neighborhood")
+        option(valie="dobong" selected) dobong
+        option(valie="dongdaemun") dongdaemun
+        option(valie="dobong") dobong
+        option(valie="dongjak") dongjak
+        option(valie="eunpyeong") eunpyeong
+        option(valie="gangbuk") gangbuk
+        option(valie="gangdong") gangdong
+        option(valie="gangnam") gangnam
+        option(valie="gangseo") gangseo
+        option(valie="geumcheon") geumcheon
+        option(valie="guro") guro
+        option(valie="gwanak") gwanak
+        option(valie="gwangjin") gwangjin
+        option(valie="jongno") jongno
+        option(valie="jung") jung
+        option(valie="jungnang") jungnang
+        option(valie="mapo") mapo
+        option(valie="nowon") nowon
+        option(valie="seocho") seocho
+        option(valie="seodaemun") seodaemun
+        option(valie="seongbuk") seongbuk
+        option(valie="seongdong") seongdong
+        option(valie="songpa") songpa
+        option(valie="yangcheon") yangcheon
+        option(valie="yeongdeungpo") yeongdeungpo
+        option(valie="yongsan") yongsan
+
+      input(type="submit")
+
