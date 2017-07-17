@@ -1,0 +1,58 @@
+extends ../layout
+
+block content
+
+  html.session
+    h1 Top Teacher
+
+  .steps.background
+    span.active 1. Your booking 
+    span -------
+    span 2. Your details
+    span -------
+    span 3. Booking request 
+
+  .wrapper
+    form.background(method="" action="")
+      label.option.selected(for="biweekly") 
+        h4 biweekly
+        p 2x per week
+        p 1 hour session
+        p W40,000 per session
+        p Free cancelation and reschedule up to 48 hours before class 
+        p.minimum 6 session minimum 
+        input(type="radio" name="sessionRadio" id="biweekly" value="biweekly")
+      label.option(for="weekly")
+        h4 weekly 
+        p 1x per week
+        p 1.5 hour session
+        p W60,000 per session
+        p Free cancelation and reschedule up to 48 hours before class 
+        p.minimum 4 session minimum 
+        input(type="radio" name="sessionRadio" id="weekly" value="weekly")
+      label.option(for="once")
+        h4 once
+        p One time meeting
+        p 1 hour session
+        p W60,000
+        p Free cancelation and reschedule up to 48 hours before class 
+        input(type="radio" name="sessionRadio" id="once" value="once")
+
+    aside.background
+      p Billing summary
+      ul
+        li(id="neighborhood") location : 
+          span.value #{session.neighborhood}
+        li(id="frequency") frequency :
+          span.value
+        li(id="day") day :
+          span.value
+        li(id="startDate") start date :
+          span.value
+        li(id="time") time :
+          span.value
+        li(id="totalSessions") total sessions  :
+          span.value
+        li(id="cost") cost :
+          span.value
+

@@ -7,6 +7,10 @@ const sessionSchema = new mongoose.Schema({
   date: Date,
   startTime: Date,
   endTime: Date
+  frequency: {
+    type: String,
+    enum: ['weekly', 'biweekly', 'once']
+  } 
 });
 
 const Session = mongoose.model('session', sessionSchema);

@@ -1,23 +1,45 @@
+/* #6bbf9c */
 * {
   margin: 0;
   padding: 0;
 }
+/**************************************************/
+/* main */
+/**************************************************/
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #333;
-  margin: 60px 24px;
+  margin: 20px 24px;
+  background-color: #fafafa;
 }
 h1 {
-  font-size: 60px;
-  padding-bottom: 15px;
+  color: #6bbf9c;
+  display: inline-block;
+  font-size: 32px;
+  padding: 12px 60px 12px 12px;
+  margin: 0 0 10px 20px;
+  width: 40%;
+}
+li {
+  list-style: none;
+}
+/**************************************************/
+/* index */
+/**************************************************/
+.jumbo h1 {
+  font-size: 48;
+}
+.jumbo body {
+  background-color: transparent;
 }
 .jumbo p {
   display: inline-block;
-  padding: 6px 8px;
-  margin: 20px;
-  font-size: 30px;
-  letter-spacing: 4px;
-  background-color: rgba(255, 255, 255, 0.80);
+  padding: 10px 12px;
+  line-height: 44px;
+  margin: 80px 20px 20px 20px;
+  font-size: 18px;
+  letter-spacing: 6px;
+  max-width:100%;
 }
 html.jumbo {
   width: 100%;
@@ -42,55 +64,191 @@ html.jumbo {
 label {
   display: inline-block;
   padding: 12px 12px 0 0;
+  letter-spacing: 4px;
 }
 input[type="submit"] {
   margin: 30px 0;
-  width: 50%;
+  width: 30%;
   font-size: 18px;
   height: 36px;
   background-color: rgba(96, 96, 96, 0.8);
   background-color: transparent;
-  border: 2px solid #34cb34;
+  border: 2px solid #6bbf9c;
   border-radius: 6px;
-  color: #85e085;
+  color: #6bbf9c;
   cursor: pointer;
 }
 select {
   color: #eee;
-  kont-size: 12px;
+  font-size: 16px;
+  padding-right: 30px;
 }
 a {
   color: #00B7FF;
 }
 form.search {
   color: #eee;
-  padding: 10px;
-  margin: 20px 0 0 20px;
+  padding: 10px 10px 10px 50px;
+  text-align: center;
+  margin: 20px auto;
   background-color: rgba(96, 96, 96, 0.8);
+  width: 80%;
   border-radius: 4px;
-  width: 40%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   body {
     margin: 30px 14px;
   }
   .jumbo p {
-    font-size: 16px;
-    line-height: 36px;
+    font-size: 14px;
+    line-height: 32px;
     margin: 5px 5px 5px 0;
     padding: 12px 2px 8px 12px;
+    max-width: 100%;
+    letter-spacing: 3px;
   }
   form.search {
-    width: 78%;
-    padding-top: 0;
+    padding: 0;
     margin: 10px 0 0 10px;
+    text-align: left;
+  }
+  .search label, .search select {
+    margin-left: 20px;
   }
   .search input {
     width: 90%;
   }
   input[type="submit"] {
-    margin: 30px 0 30px 8px;
+    margin: 30px 0 30px 30px;
+    width: 80%;
+  }
+  .jumbo h1 {
+    padding: 5px 80px 5px 5px;
+    margin: 0 0 10px 0;
   }
 }
 
+/**************************************************/
+/* session */
+/**************************************************/
+.session body {
+  margin: 0 10%;
+  color: #777;
+  max-width: 1200px;
+}
+.steps {
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px 8%;
+}
+.session .background {
+  background: #fff; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.steps span {
+  display: inline-block;
+  width: 20%;
+  font-size: 11px;
+  color: #ccc;
+}
+.steps span.active {
+  color: #333;
+}
+.session .wrapper {
+  width: 100%;
+  position: relative;
+  margin: 60px 0;
+}
+.session form {
+  padding: 10px 0 10px 0;
+  width: 60%;
+}
+.session aside p {
+  margin-bottom: 22px;
+  padding-bottom: 6px;
+  font-size: 18px;
+  border-bottom: 2px solid #eee;
+}
+.session aside li {
+  border-bottom: 2px dotted #eee;  
+  padding: 4px 0;
+}
+.session aside {
+  width: 34%;
+  position: absolute;
+  top: 0;
+  right: 3%;
+  padding: 10px;
+}
+.session span.value {
+  float: right;
+  font-size: 11px;
+}
+.session .option {
+  display: inline-block;
+  width: 31.33%;
+  vertical-align: top;
+  background: rgba(238,238,238, 0.7);
+  box-sizing: border-box;
+  margin: 1%;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  user-select: none;
+  padding: 12px 4px 0 4px;
+}
+.session .option h4 {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #aaa;
+}
+.session .option p {
+  border-bottom: 1px solid #aaa;
+  margin: 5px;
+  padding: 12px 2px 6px 6px;
+  font-size: 10px;
+}
+.session .option p.minimum {
+  border: none;
+  font-size: 8px;
+}
+.session input[type="radio"] {
+  display: block;
+  margin: 14px auto 0 auto;
+  width: 10%;
+  visibility: hidden;
+}
+.session input[type="radio"]:focus {
+  outline: none;
+}
+.session .selected {
+  background: rgba(107, 191, 156, .3);
+}
+
+@media screen and (max-width: 700px) {
+  .session body {
+    margin: 0 4%;
+  }
+  .session h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .session form {
+    width: 100%;
+  }
+  .session aside {
+    position: static;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .session .option p {
+    font-size: 9px;
+    padding: 5px 0;
+  }
+
+}

@@ -3,38 +3,38 @@ extends layout
 block content
 
   html.jumbo
-    h1 Gaby
-    p Connect you child with a top 10% English teacher
+    h1 Top Teacher
+    p Connect you child with a top 10% Native English teacher
 
-    form.search(method="/" action="Post")
-      label(for="neighborhood") location :
+    form.search(method="Get" action="/session")
+      label(for="neighborhood") Location :
       select(name="neighborhood" id="neighborhood")
-        option(valie="dobong" selected) dobong
-        option(valie="dongdaemun") dongdaemun
-        option(valie="dobong") dobong
-        option(valie="dongjak") dongjak
-        option(valie="eunpyeong") eunpyeong
-        option(valie="gangbuk") gangbuk
-        option(valie="gangdong") gangdong
-        option(valie="gangnam") gangnam
-        option(valie="gangseo") gangseo
-        option(valie="geumcheon") geumcheon
-        option(valie="guro") guro
-        option(valie="gwanak") gwanak
-        option(valie="gwangjin") gwangjin
-        option(valie="jongno") jongno
-        option(valie="jung") jung
-        option(valie="jungnang") jungnang
-        option(valie="mapo") mapo
-        option(valie="nowon") nowon
-        option(valie="seocho") seocho
-        option(valie="seodaemun") seodaemun
-        option(valie="seongbuk") seongbuk
-        option(valie="seongdong") seongdong
-        option(valie="songpa") songpa
-        option(valie="yangcheon") yangcheon
-        option(valie="yeongdeungpo") yeongdeungpo
-        option(valie="yongsan") yongsan
+        option(value="dobong" selected) dobong
+        option(value="dongdaemun") dongdaemun
+        option(value="dobong") dobong
+        option(value="dongjak") dongjak
+        option(value="eunpyeong") eunpyeong
+        option(value="gangbuk") gangbuk
+        option(value="gangdong") gangdong
+        option(value="gangnam") gangnam
+        option(value="gangseo") gangseo
+        option(value="geumcheon") geumcheon
+        option(value="guro") guro
+        option(value="gwanak") gwanak
+        option(value="gwangjin") gwangjin
+        option(value="jongno") jongno
+        option(value="jung") jung
+        option(value="jungnang") jungnang
+        option(value="mapo") mapo
+        option(value="nowon") nowon
+        option(value="seocho") seocho
+        option(value="seodaemun") seodaemun
+        option(value="seongbuk") seongbuk
+        option(value="seongdong") seongdong
+        option(value="songpa") songpa
+        option(value="yangcheon") yangcheon
+        option(value="yeongdeungpo") yeongdeungpo
+        option(value="yongsan") yongsan
 
       input(type="submit")
 
