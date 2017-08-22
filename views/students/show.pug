@@ -1,8 +1,13 @@
-h1 
-  a(href="/students") Students
+extends ../layout
 
-p #{student}
+block content
+  h1 
+    a(href="/students") Students
 
-a(href="/students/edit/" + student._id) edit
-form(method="Post" action="/students/delete/" + student._id) 
-  button(type="submit") delete
+  - if (student) {
+  p #{student}
+
+  a(href="/students/edit/" + student._id) edit
+  form(method="Post" action="/students/delete/" + student._id) 
+    button(type="submit") delete
+  - }

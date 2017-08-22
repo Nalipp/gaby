@@ -2,8 +2,6 @@ const Repo = require('../../src/studentRepo');
 const Student = require('../../model/student');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const mongoose = require('mongoose');
-const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Student Repo routes', () => {
@@ -14,7 +12,7 @@ describe('Student Repo routes', () => {
       name: 'jane',
       email: 'jane@mail.com'
     });
-    jane.save( (err) => {
+    jane.save( () => {
       done();
     });
   });

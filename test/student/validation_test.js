@@ -56,7 +56,7 @@ describe('Validates Student models', () => {
     })
       .save()
       .then()
-      .catch((err) => {
+      .catch(() => {
         Student.findOne({email: 'm@mail.com'}, (student) => {
           assert(student === null);
           done();
@@ -71,7 +71,7 @@ describe('Validates Student models', () => {
     })
       .save()
       .then(() => Student.findOne({email: 'm@mail.com'}))
-      .catch((err) => {
+      .catch(() => {
         Student.findOne({email: 'm@mail.com'}, (student) => {
           assert(student === null);
           done();

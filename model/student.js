@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const validator = require('validator');
 const NeighborhoodSchema = require('./neighborhoodSchema');
 const AvailabilitySchema = require('./availabilitySchema');
+const uniqueValidator = require('mongoose-unique-validator')
 
 const studentSchema = new Schema({
   name: {
@@ -16,7 +17,7 @@ const studentSchema = new Schema({
     type: String,
     trim: true,
     lowercase: true,
-    unique: true,
+    unique: [true, 'That email is already used'],
     required: [true, 'Email is requried'],
     validate: {
       validator: (email) => validator.isEmail(email),
@@ -26,6 +27,8 @@ const studentSchema = new Schema({
   neighborhood: [NeighborhoodSchema],
   availability: [AvailabilitySchema]
 });
+
+studentSchema.plugin(uniqueValidator, { message: '{PATH} must be unique' });
 
 const Student = mongoose.model('student', studentSchema);
 

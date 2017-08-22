@@ -1,10 +1,9 @@
-let neighborhood = $('.session #neighborhood');
 let frequency = $('.session #frequency');
-let day = $('.session #day');
-let startDate = $('.session #startDate');
-let time = $('.session #time');
-let totalSessions = $('.session #totalSessions');
 let cost = $('.session #cost');
+
+$('.flash-message').click(function() {
+  this.remove();
+})
 
 frequency.append('<span class="value">2x week</span>');
 cost.append('<span class="value">W240,000</span>');

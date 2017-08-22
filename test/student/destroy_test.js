@@ -4,7 +4,7 @@ const Student = require('../../model/student');
 describe('Student Destroy', () => {
 
   it('Should delete a Student', (done) => {
-    const tad = new Student({
+    new Student({
       name: 'tad',
       email: 'tad@mail.com',
     })

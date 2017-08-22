@@ -5,7 +5,7 @@ const teacherRepo = require('../src/teacherRepo');
 
 router.get('/', (req, res) => {
   teacherRepo.getTeachers(result => {
-    if (result.err) return console.log(err); 
+    if (result.err) return console.log(result.err); 
     res.render('teachers/index', { teachers: result.data });
   });
 });

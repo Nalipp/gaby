@@ -6,7 +6,7 @@ const sessionSchema = new mongoose.Schema({
   studentNoShow: { type: Boolean, default: false },
   date: Date,
   startTime: Date,
-  endTime: Date
+  endTime: Date,
   frequency: {
     type: String,
     enum: ['weekly', 'biweekly', 'once']

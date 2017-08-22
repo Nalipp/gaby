@@ -1,11 +1,16 @@
-h1 
-  a(href="/students") Students
+extends ../layout
 
-ul
-  for student in students
-    a(href="/students/" + student._id) 
-      li= student
+block content
+  h1 
+    a(href="/students") Students
 
-a(href="/students/new") new student
+  - if (students) {
+  ul
+    for student in students
+      a(href="/students/" + student._id) 
+        li= student
+  - }
+
+  a(href="/students/new") new student
 
 

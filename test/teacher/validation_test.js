@@ -63,14 +63,14 @@ describe('Validates Teacher models', () => {
   });
 
   it('Should validate Teacher NeighborhoodSchema as valid name', (done) => {
-    const teacher = new Teacher({ 
+    new Teacher({ 
       name: 'Jane',
       email: 'm@m.mail.com',
       neighborhood: [{name: 'Iongpa'}]
     })
       .save()
       .then()
-      .catch((err) => {
+      .catch(() => {
         Teacher.findOne({name: 'Jane'}, (teacher) => {
           assert(teacher === null);
           done();
@@ -87,7 +87,7 @@ describe('Validates Teacher models', () => {
       .save()
       .then(() => Teacher.findOne({name: 'Jane'}))
       .then()
-      .catch((err) => {
+      .catch(() => {
         Teacher.findOne({name: 'Jane'}, (teacher) => {
           assert(teacher === null);
           done();

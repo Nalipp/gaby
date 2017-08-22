@@ -23,6 +23,12 @@ h1 {
 li {
   list-style: none;
 }
+.flash-message {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #555;
+  cursor: pointer;
+}
 /**************************************************/
 /* index */
 /**************************************************/
