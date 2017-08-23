@@ -1,24 +1,16 @@
+require('./config/dbConfig');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var teachers = require('./routes/teachers');
 var students = require('./routes/students');
 
 var app = express();
-
-mongoose.connect('mongodb://localhost/gaby', err => {
-  if (err) {
-    console.log("# Failed to connect to MongoDB ");
-  } else {
-    console.log('# Connected to MongoDB')
-  }
-})
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
