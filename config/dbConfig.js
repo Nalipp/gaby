@@ -1,12 +1,16 @@
 var mongoose = require('mongoose');
 
 if (process.env.NODE_ENV === 'dev') {
-  process.env.MONGODB_URI = 'mongodb://localhost:27017/gaby';
-} else {
-  process.env.MONGODB_URI = 'mongodb://heroku_57q76p5t:stuoc3h34lt8lvh13i4s9mkra9@ds153113.mlab.com:53113/heroku_57q76p5t';
+  url = 'mongodb://localhost:27017/gaby';
+} 
+else {
+  url = 'mongodb://heroku_m7jkxr6b:3371vuqjk1vvb7tg7usjd715j0@ds151993.mlab.com:51993/heroku_m7jkxr6b';
 }
 
-mongoose.connect(process.env.MONGODB_URI, err => {
+console.log('url........................');
+console.log(url);
+
+mongoose.connect(url, err => {
   if (err) {
     console.log("# Failed to connect to MongoDB ");
   } else {
