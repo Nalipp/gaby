@@ -85,7 +85,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 select {
-  color: #eee;
+  color: #666;
   font-size: 16px;
   padding-right: 30px;
 }
